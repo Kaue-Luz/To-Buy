@@ -1,10 +1,11 @@
-import { Text, View } from "react-native";
+import { StyleSheet, Text, View } from "react-native";
+import { styles } from "./styles";
 
 export default function App() {
   return (
     <>
-      <View style={{ flex: 1, justifyContent: "center" }}>
-        <Text>Hello, World!</Text>
+      <View style={styles.container}>
+        <Text style={styles.text}>Hello, World!</Text>
       </View>
     </>
   );
