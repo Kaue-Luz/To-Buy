@@ -2,6 +2,8 @@ import { Image, View } from "react-native";
 import { styles } from "./styles";
 import { Button } from "@/components/Button";
 import { Input } from "@/components/Input/Index";
+import { Filter } from "@/components/Filter";
+import { FilterStatus } from "@/types/FilterStatus";
 
 export function Home() {
   return (
@@ -17,7 +19,10 @@ export function Home() {
           <Button title="Adicionar" onPress={() => console.log("adicionar")} />
         </View>
 
-        <View style={styles.content}></View>
+        <View style={styles.content}>
+          <Filter status={FilterStatus.DONE} isActive />
+          <Filter status={FilterStatus.PENDING} isActive={false} />
+        </View>
       </View>
     </>
   );
