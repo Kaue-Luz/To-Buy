@@ -12,8 +12,12 @@ export function Home() {
           source={require("@/assets/logo.png")}
         ></Image>
 
-        <Input placeholder="O que você precisa comprar?" />
-        <Button title="Adicionar" onPress={() => console.log("adicionar")} />
+        <View style={styles.form}>
+          <Input placeholder="O que você precisa comprar?" />
+          <Button title="Adicionar" onPress={() => console.log("adicionar")} />
+        </View>
+
+        <View style={styles.content}></View>
       </View>
     </>
   );
