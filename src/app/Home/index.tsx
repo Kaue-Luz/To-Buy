@@ -10,7 +10,8 @@ export function Home() {
           style={styles.logo}
           source={require("@/assets/logo.png")}
         ></Image>
-        <Button />
+        <Button title="Adicionar" onPress={() => console.log("adicionar")} />
+        <Button title="Excluir" onPress={() => console.log("excluir")} />
       </View>
     </>
   );
