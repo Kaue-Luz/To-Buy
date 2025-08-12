@@ -9,6 +9,7 @@ export type ItemStorage = {
   description: string;
 };
 
+//metodo para listar 
 async function get(): Promise<ItemStorage[]> {
   try {
     const storage = await AsyncStorage.getItem(ITEMS_STORAGE_KEY);
@@ -18,6 +19,7 @@ async function get(): Promise<ItemStorage[]> {
   }
 }
 
+//metodo para filtrar pelo status
 async function getByStatus(status: FilterStatus): Promise<ItemStorage[]> {
   const items = await get();
   return items.filter((item) => item.status === status);
