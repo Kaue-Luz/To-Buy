@@ -39,7 +39,7 @@ export function Home() {
     await itemsByStatus();
 
     Alert.alert("Adicionado", `Adicionado ${description}`);
-    setFilter(FilterStatus.PENDING)
+    setFilter(FilterStatus.PENDING);
     setDescription("");
   }
 
@@ -49,6 +49,16 @@ export function Home() {
       setItems(response);
     } catch (error) {
       Alert.alert("Erro", "Não foi possivel filtrar os itens.");
+    }
+  }
+
+  async function handleRemove(id: string) {
+    try {
+      await itemsStorage.remove(id);
+      await itemsByStatus();
+    } catch (error) {
+      console.log(error);
+      Alert.alert("Remover", "Não foi possivel remover o item.");
     }
   }
 
@@ -96,7 +106,7 @@ export function Home() {
               <Item
                 data={item}
                 onStatus={() => console.log("Mudar o status")}
-                onRemove={() => console.log("remover")}
+                onRemove={() => handleRemove(item.id)}
               />
             )}
             showsVerticalScrollIndicator={false}
