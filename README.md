@@ -17,11 +17,6 @@ Aplicativo mobile de lista de compras desenvolvido com **React Native** e **Type
 
 ## 📸 Screenshots
 
-### Tela com itens comprados
-<img src="./assets/screenshots/Home - Comprados.png" width="250" />
-
-### Tela com itens pendentes
-<img src="./assets/screenshots/Home - Pendentes.png" width="250" />
-
-### Tela com lista vazia
-<img src="./assets/screenshots/Home - Lista vázia.png" width="250" />
+| Itens Comprados | Itens Pendentes | Lista Vazia |
+| --------------- | --------------- | ----------- |
+| <img src="./assets/screenshots/Home - Comprados.png" width="250" /> | <img src="./assets/screenshots/Home - Pendentes.png" width="250" /> | <img src="./assets/screenshots/Home - Lista vázia.png" width="250" /> |
